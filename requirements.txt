@@ -1,0 +1,8 @@
+streamlit
+transformers
+accelerate
+sentencepiece
+torch
+pandas
+matplotlib
+fpdf
