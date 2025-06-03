@@ -45,6 +45,10 @@ with tabs[0]:
     This assistant helps petroleum engineers analyze multi-platform reservoir simulation data and get GenAI-driven insights.
 
     ## ✨ What’s Included
+- Provides most preferred drilling location in the zone in the form of **X, Y, Z**
+  - **X**: East-West coordinate in meters
+  - **Y**: North-South coordinate in meters
+  - **Z**: Depth from surface (negative means below surface)
     - 10 key real-world basins for simulation
     - Real-time and mock simulators with drill zone selection
     - Integration of OpenAI for recommendations
@@ -310,6 +314,13 @@ with tabs[len(sim_names) + 4]:
 # 🎯 Drill Targeting
 with tabs[len(sim_names) + 5]:
     st.header("🎯 Targeted Drilling Coordinates")
+
+    st.markdown("""
+    ### 🧭 Coordinate Explanation
+    - **X**: East-West coordinate in meters (horizontal)
+    - **Y**: North-South coordinate in meters (horizontal)
+    - **Z**: Depth below surface (vertical; typically negative)
+    """)
     st.markdown("We analyze simulation data to suggest the most promising XYZ coordinates for drilling.")
 
     for sim in sim_names:
